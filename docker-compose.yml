@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=culturameta_db
+      - POSTGRES_USER=culturameta
+      - POSTGRES_PASSWORD=CultuR4M3t4
+  electronic_stamp:
+    build: .
+    container_name: electronic_stamp
+    ports:
+      - 8002
+    volumes:
+      - .:/code-electronicstamp
+    command: python manage.py runserver 0.0.0.0:8002
+    depends_on:
+      - database
+  https-portal:
+    image: steveltn/https-portal:1
+    container_name: https-portal
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      DOMAINS: 'estampilla.culturameta.gov.co -> http://electronic_stamp:8002'
+      STAGE: 'production' # Don't use production until staging works
+      CLIENT_MAX_BODY_SIZE:  5M
+    volumes:
+      - https-portal-data:/var/lib/https-portal
+      - /data/https-portal/vhosts:/var/www/vhosts
+    depends_on:
+      - electronic_stamp
+volumes:
+    https-portal-data: # Recommended, to avoid re-signing when upgrading HTTPS-PORTAL
