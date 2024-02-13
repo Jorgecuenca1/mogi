@@ -11,9 +11,9 @@ services:
       - POSTGRES_DB=culturameta_db
       - POSTGRES_USER=culturameta
       - POSTGRES_PASSWORD=CultuR4M3t4
-  electronic_stamp:
+  mogi:
     build: .
-    container_name: electronic_stamp
+    container_name: mogi
     ports:
       - 8002
     volumes:
@@ -28,13 +28,13 @@ services:
       - '80:80'
       - '443:443'
     environment:
-      DOMAINS: 'estampilla.culturameta.gov.co -> http://electronic_stamp:8002'
+      DOMAINS: 'mogi.vueanalytic.com -> http://mogi:8002'
       STAGE: 'production' # Don't use production until staging works
       CLIENT_MAX_BODY_SIZE:  5M
     volumes:
       - https-portal-data:/var/lib/https-portal
       - /data/https-portal/vhosts:/var/www/vhosts
     depends_on:
-      - electronic_stamp
+      - mogi
 volumes:
     https-portal-data: # Recommended, to avoid re-signing when upgrading HTTPS-PORTAL
