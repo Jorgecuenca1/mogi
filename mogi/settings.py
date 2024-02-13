@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(k+$-wmg5m$*qx@^f-aul59+4nhk6m$(=9m2iwkv%)rk_ub&tx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','mogi.vueanalytic.com']
+ALLOWED_HOSTS = ['*','mogi.vueanalytic.com','https://mogi.vueanalytic.com']
 
 
 # Application definition
