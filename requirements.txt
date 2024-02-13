@@ -1,0 +1,14 @@
+
+
+Django
+django-chartjs
+django-import-export
+msgpack
+django-cors-headers
+django-dynamic-raw-id
+Pillow
+django-file-validator
+django-ckeditor
+django-nested-admin
+psycopg2
+django_form_builder

@@ -1,0 +1,601 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Culturameta</title>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0"
+            nonce="RStjT2nI"></script>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;500&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <style>
+
+body {
+ background-color:#DFE0E4;
+  color: #5a5a5a;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+@media (min-width: 300px) {
+    .carousel-item {
+      height: 10rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .carousel-item {
+      height: 20rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .carousel-item {
+      height: 32rem;
+    }
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .logos-margin {
+        margin-right:18px;
+      }
+      .texto {
+        font-size: 12px;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .dropdown-menu {
+        text-color: #FFF;
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body class="texto">
+<div>
+    <div class="text-bg-primary p-3">
+        <ul class="nav" style="height:10px">
+            <div class="col-md-4">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAvCAMAAACRx3WWAAAA7VBMVEUAAAD/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////0gD/////////////////0QD///8AVKP1GDzzGT31GDz///////////////////8AVaL////////////9FTYKTZP/0QD/3ACqrDLzGT0AXq8AP7usrDEKTZP/0QCqrDH/////0QAAVaLzGT0AP7sAXq//5gCqrDLqVI3nAAAAR3RSTlMA+wnr41a3ICUQvy1eTvKAFgSUcGzbz4vFnvY8sDGlZ0lFONbKqaIjG5pjQcWPIyD6xHQ0hnvTxRSseP378M391MbFxcK5I+ToC8YAAAdYSURBVGje5VjXutowDM4O2SEJG8KmjNLB6N7L3e//OLViJzaC73RclVYX58RWbOvX+K2g/Jbcev78+XvlH5BbHz9+fKH8AwJAbiv/gFwNkGXM/zvXDGSfTNXuij70ZmpoZdqVAokXpJBMUVwCYvhXCcTUCZdUGfEny74+ICvCZTp3Ta3BB3pwZUBqTVKKYYVED6vh4aqADHQWDHIiLCzzXwUST8bjSXxRpS1rNedPjavHtbh+SfGohhUjFbLI6i234zLD1MBPtahA5jq/AKS3bXbh5W47quFoHy2DHhA+WJnlsfbjTmexwUWadxYdzJSblmt0VdWwjqfban5n2qXHGf2dXSGOqPPb0YSNMgDlph6zIcipfeHkZ0D2FpGkE8swcjnGQ24GpG4TbQKOaJ9OBW0i5LEEJTXEvLri5/lhOjCNmWE9KmDBfiMeqel0OhtMrGl8M5CUCEEU4XdPVW7MpuHZOzX6bEqbn65Vs9I5bXQes9fZLPb1ubtWo2I4o5qELQjzqL1W0pat3QgkYts1O4fDipPGmKuOXDVfLdoMUqNAokFRbhVZIKgzecJ5wM1stpvwemWXp3NW6nQsHhm/pF6aZx2y2UeWldCo930zby98Z6F6MD+4uUbWBGSxZyNvCwNHUqkt5uc4K059UAzgLV2u1CXoTHnfGcvTsQbARwvYqdA/KnD0R8XqesCyesJLSg8omirvEhZTVacA+2264Cwi2IJwLCY8wy1ruqBCT/i4DxOtIjuw3RFG1iIQIrF4b/DEc0GxFi9mhC99Qq8KQjLNUonbe9SgiUCT3FlmOgmHmktyxZv3BJBv376dfo+AcRA5IQ7YUx5pODh/iF3qXEljcIggFVL3hN49UUvmWUo8oUtC3esSg1LoxB9GYXMXmE+OabbbmDXoVRKTbIWnPrz8/v2tvIst/IPFA9VejMvaSCp7RAc0ZkMhC3DzpbYVrgRobPG7kDhRQyWWMprTMHl1xewc6eUWmMr4MfjFsGT4d758+fIGV3pTuSgJpDKay9iZPASRiCvyv6Nyv2PZw2UFAPHLAVQM9If0XGVDTEeLhq3l0nFVxSRFASwUGcinT58eyhPAhEMxxL4biaG4QXoloRnVJc1MERLIWuy4HE/OeZy94sQhUSbgr+0hAYUOE/UcnIqBYMNESmAW6LIKQVWSFSkv0/QO290Sl8D5eh9PmvwuHdD/SwqLlWD0eP24OG1HXXeAWGEgqA4a5WC4bTHZtiiAzcWkiyoLH0uZ15DzjCsvV96DimuRFQYH4tGk3T+Ko5nrTJbjZt934i1JldVPgGzk3G6QSmrgJliLZV2lRg/ei/GjRHijSx2kUWyOJFYJ0TmgDV27OBz8ND2aWbpbZ63DlGbt/CepNZatFZ2DagMQtLZqTnJRQ0847eBXXZF350Dssz64S0gIFKoCQ+Qk0DRH03rz2aPiwSIebJjfBKQnd3ouA8GBBEKFaKsjHhsV6/RwKWDSElEf4EkAoHN2j2hJpCzTyzd1ogFJJjcBqcl0b3s1KrbFgAyYCkkiqkHrgv0CkSyd8jUs7QohcucDXkFzSlluyXwps7FRUMvuDAgKNXKmkgOQimmRNMEQydqcz2WooZbDiREml9rvxzyQhlJXVY2BbqZMmygBxo+BKP3zi7bPgChWmUW481hKZNN1itCpDuYhqahxjenn3uHO3xarLLKz94NBbWcO9gPPblCaS0BxIxCfVcQlIGtQLc+vLvekwR0qKwwYZCpYBN3inCIQdRK7vFCO0Fj5WZoO971hmgYrYGYDQnUOBN+ID3Dro9pMhfMjIPINzhla5/WLaRrnW8xzCzepmsFAc5gNqG4f5o9PWLjSglwXp0C+fv36GtEQmCs5ftCAMFaqeR39ONCUKoxi0BP0RSVfSqlME7pXdQS6BDxuSt+WVkHbJulS1C1jNoEbONQwmwOQZ8+evTvnEaKnjzhztQiILVTNMgJ2QnDms5flpqMW8edBobD48Zo5o4dMGKuCHB3uC98gEsNtWH7M4I9j2w6kman0zmnx7tOnT++jrGUXeugmxydbVyXSvo5RjKZJ5g8ji6l8/BEAa7UKR1jlgM90jfywOzyGjcq2l/lDnz9Z+7uOgX6zcos4OlO4YB/MlJpKWiy6o5uBgMQuQZJWqhnSqP55Dyh/vSdSzMwuWtzY1HkckXSkSz6EDYBA+nFkDlWopwQzKwC59/kzBYJkpxNJXLmpO5xYY3lo5Qhl21Huump9IktSxS14IGbxj+0e1N2sSBGtZ6jUd67U+WMgWJzMCgmLeI5iaEdNlR/YGV+4qXUjzKWNXKIOxXCynbLF6uz0hz+/z8/rWkMNHZgXlGIGJCSNZRJCKDPlBiAYyz4w/WCgXVDZY3/oBx5TYdHqp/MDGy3emL65sc/Pm5jrtdkDjsGyHAUeZ5qx4mxMkSEYyDUIkFvZMVw1kJZRcH/v6oEwbrOV6wcCnxOm9g8AoU0G7bX+BSBU/gcgnz9/fqX8A3L33r17f2lEfgDwVfBlQJDDCwAAAABJRU5ErkJggg==" alt="Logo" width="80px"
+                     height="20px" style="margin-top:-5px;"
+                     class="d-inline-block align-text-top">
+
+            </div>
+        </ul>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light " style="Background-color:#0F193A">
+        <div class="container-fluid">
+            <div class="col-md-4 offset-md-1">
+                <h7 style="color:#FFF">Instituto de cultura del Meta</h7>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-2">
+                <button onclick="restar()" class="btn btn-primary mb-3 mr-1"
+                        style="Background-color: #ff9200; color: #FFF; margin-top:10px;" type="button"> A-
+                </button>
+
+                <button onclick="normal()" class="btn btn-primary mb-3 mr-1"
+                        style="Background-color: #ff9200; color: #FFF; margin-top:10px;" type="button"> A
+                </button>
+                 <button onclick="aumentar()" class="btn  mb-3 mr-1" style="Background-color: #ff9200; color: #FFF; margin-top:10px;"
+                        type="button"> A+
+                </button>
+
+            </div>
+        </div>
+</div>
+<div class="text-bg-white p-3">
+    <ul class="nav">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <img src="https://devx.meta.gov.co/media/logo/2020/06/25/colombia.png" alt="Logo" width="70" height="50"
+                 class="d-inline-block align-text-top logos-margin">
+
+            <img src="https://devx.meta.gov.co/media/logo/2020/06/25/dpto.png" alt="Logo" width="50"
+                 height="50"
+                 class="d-inline-block align-text-top logos-margin">
+            <img src="https://devx.meta.gov.co/media/logo/2020/06/25/bandera.png" alt="Logo" width="50" height="50"
+                 class="d-inline-block align-text-top logos-margin">
+            <img src="https://storage.vueanalytic.com/media/upload/documento/logo_Y9KlZLx.png" alt="60" width="90"
+                 height="50"
+                 class="d-inline-block align-text-top logos-margin">
+        </div>
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-1">
+
+
+        </div>
+    </ul>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <a href=""><img class="bd-placeholder-img" width="100%" height="100%"
+                 src="https://storage.vueanalytic.com/media/upload/documento/BANNER_VIII_TEATRO-03_6fld3K3.png"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+
+            <div class="container">
+                <div   class="carousel-caption text-start">
+
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+           <a href="https://culturameta.gov.co/convocatoria/Joropodromo2023">  <img class="bd-placeholder-img" width="100%" height="100%"
+                 src="https://storage.vueanalytic.com/media/upload/documento/BANNER_TORNEO-01.png"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+
+            <div class="container">
+                <div class="carousel-caption">
+                <p><a class="btn btn-lg btn-primary" href="https://culturameta.gov.co/pagina/listadoconvocatoria">INGRESAR</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+         <a href="https://culturameta.gov.co/convocatoria/Torneo2023">     <img class="bd-placeholder-img" width="100%" height="100%"
+                 src="https://storage.vueanalytic.com/media/upload/documento/BANNER_TORNEO-01.png"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <p><a class="btn btn-lg btn-primary" href="https://culturameta.gov.co/convocatoria/Torneo2023">INGRESAR</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="Background-color:#0F193A">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" style="Background-color:#FFF" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="Background-color:#FFF">
+                    {% for menu in menus %}
+                    <li class="nav-item dropdown" style="margin-top: -8px">
+                        <a class="nav-link dropdown-toggle bg-white" href="#" id="navbarDropdownMenuLink"
+                           style="color: #0F193A; font-size:14px;" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            {{menu.titulo}}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            {% for submenu in submenus %}
+                            {% if submenu.menu.id == menu.id %}
+                            <li><a class="dropdown-item" href="{{submenu.url}}" style="font-size:12px;">{{submenu.titulo}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container-fluid" style="background-color:#0F193A;">
+    <div class="row justify-content-center">
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="https://estampilla.culturameta.gov.co/users/login/">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="https://storage.vueanalytic.com/media/upload/documento/WhatsApp_Image_2022-12-14_at_21.52.55.png"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Estampilla
+            </h6>
+        </div>
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="/pagina/documentacion">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="https://storage.vueanalytic.com/media/WhatsApp_Image_2022-12-14_at_21.52.55_2.png"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Documentación
+            </h6>
+        </div>
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="/pagina/listadoconvocatoria">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="https://storage.vueanalytic.com/media/WhatsApp_Image_2022-12-14_at_21.52.55_3.png"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Convocatorias
+            </h6>
+        </div>
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="/pagina/rendiciondecuentas">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="https://storage.vueanalytic.com/media/Rendicion.png"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Rendición
+            </h6>
+        </div>
+            <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+                <a href=""><img class="bd-placeholder-img" width="60px"
+                                                                   height="60px"
+                                                                   src="https://storage.vueanalytic.com/media/upload/documento/iconos_pagina_web_Mesa_de_trabajo_1_copia_2.png"
+                                                                   aria-hidden="true"
+                                                                   preserveAspectRatio="xMidYMid slice"
+                                                           focusable="false"/></a>
+                <br/>
+                <h6 style="color:#FFF; font-size:14px;">
+                  Torneo
+                </h6>
+            </div>
+            <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+                <a href="https://sites.google.com/culturameta.gov.co/observatorio-cultural-meta/p%C3%A1gina-principal"><img class="bd-placeholder-img" width="60px"
+                                                                   height="60px"
+                                                                   src="https://storage.vueanalytic.com/media/upload/documento/iconos_pagina_web_Mesa_de_trabajo_1.png"
+                                                                   aria-hidden="true"
+                                                                   preserveAspectRatio="xMidYMid slice"
+                                                           focusable="false"/></a>
+                <br/>
+                <h6 style="color:#FFF; font-size:14px;">
+                  Observatorio
+                </h6>
+            </div>
+
+
+        </div>
+    </center>
+</div>
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+
+            {% for pagina in paginas %}
+            {% if pagina.formato == '1' %}
+             <div class="col-md-12">
+                <p class="" style="font-size:24px; color:#cc0000">{{pagina.titulo|safe }}</p>
+
+            </div>
+            <div class="col-md-7">
+                <p class="lead" style="color=#000">{{pagina.descripcion|safe }}</p>
+                 </div>
+
+            <div class="col-md-5">
+                {% for imagen in imagenes %}
+                <img class="bd-placeholder-img" width="100%" height="100%"
+                     src="https://storage.vueanalytic.com/media/{{imagen.imagen}}" aria-hidden="true"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+                     {% endfor %}
+            </div>
+             <div class="col-md-12">
+                {% for documento in documentos %}
+
+                <a class="btn btn-primary" href="{{documento.url}}" role="button">{{documento.titulo}}</a>
+                 <br>
+
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if pagina.formato == '2' %}
+            <div class="col-md-12">
+                <p class="" style="font-size:24px; color:#cc0000">{{pagina.titulo|safe }}</p>
+
+            </div>
+            <div class="col-md-12">
+                <p class="lead" style="color:#22">{{pagina.descripcion|safe }}</p>
+
+            </div>
+            <div class="col-md-12">
+                {% for documento in documentos %}
+                <a class="btn btn-primary" href="{{documento.url}}" role="button">{{documento.titulo}}</a>
+                    <br>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+   <div style="Background-color:#0F193A">
+
+        <div class="container-fluid" style="color:#FFF; font-size:14px;">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-6 col-md-4 mb-6 offset-md-1">
+                        <h5>Información de contacto</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Instituto
+                                departamental de cultura del meta</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Dirección sede
+                                principal: Crr 8 #8-110 | 4-2 a San Martín de los Llanos - Meta - Colombia.</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Teléfono: (8) 6716222
+                                | Email: contacto@culturameta.gov.co</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Terminos y
+                                condiciones</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Política de privacidad
+                                y tratamiento de datos personales</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"> Política de derechos
+                                de autor </a></li>
+                    </div>
+
+                    <div class="col-6 col-md-3 mb-3">
+                        <h5>Interes</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Facebook</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Instagram</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Twitter</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Tiktok</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Torneo
+                                internacional</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">del joropo</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-3  mb-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.784532801394!2d-73.69506763926488!3d3.6921837737990497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e0f18aaa78b79%3A0xd5b8c9f9fefbb59c!2sHOSPITAL%20LOCAL%20SAN%20MARTIN%20META!5e0!3m2!1ses!2sco!4v1668740355871!5m2!1ses!2sco"
+                                width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+        <div class="text-bg-primary p-3 ">
+            <ul class="nav" style="height:10px">
+                <div class="col-md-4">
+                    <img src="https://backend.culturameta.gov.co/media/colo-svg.png" alt="Logo" width="30px"
+                         height="30px" style="margin-top:-10px;"
+                         class="d-inline-block align-text-top">
+
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script>
+
+const size = 12;
+const cont = 2;
+
+var texto = document.getElementsByClassName('texto');
+for (let i = 0; i < texto.length; i++){
+   texto[i].style.fontSize = `${size}px`;
+}
+
+function normal(){
+    var texto = document.getElementsByClassName('texto');
+    for (let i = 0; i < texto.length; i++){
+        texto[i].style.fontSize = `${size}px`;
+        console.log(texto[i].style.fontSize);
+    }
+}
+
+function aumentar(){
+    var texto = document.getElementsByClassName('texto');
+    for (let i = 0; i < texto.length; i++){
+        const actualSize = texto[i].style.fontSize.replace("px", "");
+        texto[i].style.fontSize = `${parseInt(actualSize)+cont}px`;
+        console.log(texto[i].style.fontSize);
+    }
+}
+
+function restar(){
+    var texto = document.getElementsByClassName('texto');
+    for (let i = 0; i < texto.length; i++){
+        const actualSize = texto[i].style.fontSize.replace("px", "");
+        texto[i].style.fontSize = `${parseInt(actualSize)-cont}px`;
+        console.log(texto[i].style.fontSize);
+    }
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
