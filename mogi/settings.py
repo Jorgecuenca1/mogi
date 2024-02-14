@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOWED_ORIGINS = ['*','mogi.vueanalytic.com','https://mogi.vueanalytic.com','vueanalytic.com']
 ROOT_URLCONF = 'mogi.urls'
 CSRF_TRUSTED_ORIGINS = ['*','mogi.vueanalytic.com','https://mogi.vueanalytic.com','vueanalytic.com']
 
