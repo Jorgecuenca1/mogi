@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*','mogi.vueanalytic.com','https://mogi.vueanalytic.com','vueanalytic.com']
 
-CSRF_TRUSTED_ORIGINS = ['*','mogi.vueanalytic.com','https://mogi.vueanalytic.com','vueanalytic.com']
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
