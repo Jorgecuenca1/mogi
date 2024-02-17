@@ -8,7 +8,7 @@ def inicio(request):
     menus = Menu.objects.filter().order_by('id')
     submenus = SubMenu.objects.filter().order_by('id')
     sliders = Slider.objects.filter().order_by('id')
-    noticias = Noticia.objects.filter(age__contains='2023').order_by('-id')[:3]
+    noticias = Noticia.objects.filter(age__contains='2024').order_by('-id')[:3]
     noticias2 = Noticia.objects.filter(orden='2').order_by('-id')[:4]
     return render(request, 'index.html', {'menus': menus,'submenus': submenus,'sliders': sliders,'noticias2': noticias2,'noticias': noticias})
 def noticias(request):
