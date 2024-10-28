@@ -1,12 +1,19 @@
-from .models import Pagina, Noticia, SubMenu, Menu, Document, Slider
+from .models import Pagina, Noticia, SubMenu, Menu, Document, Slider, Contract, Documento
 from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
-
+class DocumentoInline(admin.TabularInline):
+    model = Documento
+    extra = 1
 class DocumentInline(admin.TabularInline):
     model = Document
 class SubMenuInline(admin.TabularInline):
     model = SubMenu
+
+class ContractAdmin(admin.ModelAdmin):
+    list_display = ("year", "consecutive", "contract_number", "entity")
+    inlines = [DocumentoInline]
+admin.site.register(Contract, ContractAdmin)
 
 
 class SliderAdmin(ImportExportModelAdmin):

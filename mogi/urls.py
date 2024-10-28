@@ -26,6 +26,7 @@ urlpatterns = [
     path('noticia/<str:slug>', configuracion_views.noticia, name='noticia'),
     path('pagina/noticia', configuracion_views.noticias, name='noticias'),
     path('pagina/<str:slug>', configuracion_views.pagina, name='pagina'),
+    path("contratos/", configuracion_views.contract_list_view, name="contract_list"),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:

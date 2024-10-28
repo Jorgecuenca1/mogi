@@ -1,8 +1,10 @@
 from django.shortcuts import render
 
-from .models import Noticia, Menu, SubMenu, Slider, Document, Pagina
+from .models import Noticia, Menu, SubMenu, Slider, Document, Pagina, Contract
 
-
+def contract_list_view(request):
+    contracts = Contract.objects.prefetch_related("documents").all()
+    return render(request, "contratos.html", {"contracts": contracts})
 # Create your views here.
 def inicio(request):
     menus = Menu.objects.filter().order_by('id')

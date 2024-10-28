@@ -180,7 +180,24 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.name
+from django.db import models
 
+class Contract(models.Model):
+    year = models.IntegerField()
+    consecutive = models.IntegerField()
+    contract_number = models.CharField(max_length=100)
+    entity = models.CharField(max_length=255)
+    object = models.TextField()
+
+    def __str__(self):
+        return f"{self.contract_number} - {self.entity}"
+
+class Documento(models.Model):
+    contract = models.ForeignKey(Contract, on_delete=models.CASCADE, related_name="documents")
+    file = models.FileField(upload_to="")
+
+    def __str__(self):
+        return f"Document for {self.contract}"
 class Document(models.Model):
     titulo = models.CharField(
         null=False, blank=False, max_length=100,
@@ -194,7 +211,6 @@ class Document(models.Model):
     )
     url = models.TextField(
         verbose_name='URL Document',
-
         blank=True, null=True
     )
     archivo = models.FileField(
@@ -212,8 +228,8 @@ class Document(models.Model):
 
     class Meta:
         ordering = ["id"]
-        verbose_name = "Documento",
-        verbose_name_plural = "Documento"
+        verbose_name = "Documento"
+        verbose_name_plural = "Documentos"
 
     def __str__(self):
         return self.titulo

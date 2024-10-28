@@ -1,0 +1,631 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta
+      name="description"
+      content="Mogi"
+    />
+    <link rel="apple-touch-icon" href="https://backend.culturameta.gov.co/media/logo.png" />
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>MOGI</title>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v12.0"
+            nonce="RStjT2nI"></script>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100;500&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <style>
+
+body {
+ background-color:#f7f7f7;
+  color: #5a5a5a;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.noticia {
+  max-height: 420px;
+}
+.image-noticia{
+max-height: 300px;
+}
+
+
+@media (min-width: 300px) {
+    .carousel-item {
+      height: 10rem;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .carousel-item {
+      height: 20rem;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .carousel-item {
+      height: 32rem;
+    }
+    .noticia {
+  max-height: 800px;
+}
+.image-noticia{
+max-height: 350px;
+}
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+      .logos-margin {
+        margin-right:18px;
+      }
+      .texto {
+        font-size: 12px;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .dropdown-menu {
+        text-color: #FFF;
+
+      }
+             .search{
+       position: relative;
+       box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+
+       }
+
+       .search input{
+
+        height: 60px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+
+
+       }
+
+
+       .search input:focus{
+
+        box-shadow: none;
+        border: 2px solid blue;
+
+
+       }
+
+       .search .fa-search{
+
+        position: absolute;
+        top: 20px;
+        left: 16px;
+
+       }
+
+       .search button{
+
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 50px;
+        width: 110px;
+        background: blue;
+
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body class="texto">
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light " style="Background-color:#ff006c">
+        <div class="container-fluid">
+            <div class="col-md-4 offset-md-1">
+                <h7 style="color:#FFF">Misión y observación de genero e inclusión</h7>
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-2">
+                <button onclick="restar()" class="btn btn-primary mb-3 mr-1"
+                        style="Background-color: #ff9200; color: #FFF; margin-top:10px;" type="button"> A-
+                </button>
+
+                <button onclick="normal()" class="btn btn-primary mb-3 mr-1"
+                        style="Background-color: #ff9200; color: #FFF; margin-top:10px;" type="button"> A
+                </button>
+                 <button onclick="aumentar()" class="btn  mb-3 mr-1" style="Background-color: #ff9200; color: #FFF; margin-top:10px;"
+                        type="button"> A+
+                </button>
+
+            </div>
+        </div>
+</div>
+<div class="text-bg-white p-3">
+    <ul class="nav">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'logo.png' %}" alt="Logo" width="140" height="70"
+                 class="d-inline-block align-text-top logos-margin">
+
+
+        </div>
+        <div class="col-md-4">
+             <div class="search">
+                          <i class="fa fa-search"></i>
+                          <input type="text" class="form-control" placeholder="Documentos">
+                          <button class="btn btn-primary">Buscar</button>
+                        </div>
+
+        </div>
+        <div class="col-md-1">
+
+
+        </div>
+    </ul>
+</div>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="Background-color:#ff006c">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" style="Background-color:#FFF" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="Background-color:#FFF">
+                    {% for menu in menus %}
+                    <li class="nav-item dropdown" style="margin-top: -8px">
+                        <a class="nav-link dropdown-toggle bg-white" href="#" id="navbarDropdownMenuLink"
+                           style="color: #002fd1; font-size:14px;" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            {{menu.titulo}}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            {% for submenu in submenus %}
+                            {% if submenu.menu.id == menu.id %}
+                            <li><a class="dropdown-item" href="{{submenu.url}}" style="font-size:12px;">{{submenu.titulo}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container-fluid" style="background-color:#ff006c;">
+    <div class="row justify-content-center">
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="{% static 'donacion1(1).png' %}"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Donaciones
+            </h6>
+        </div>
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="{% static 'colaboracion.png' %}"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Voluntariado
+            </h6>
+        </div>
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="{% static 'calendario.png' %}"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Calendario
+            </h6>
+        </div>
+        <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+            <a href="">
+                <img class="bd-placeholder-img" width="60px" height="60px"
+                     src="{% static 'emprendimientos.png' %}"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            </a>
+            <br />
+            <h6 style="color:#FFF; font-size:14px;">
+                Emprendimientos
+            </h6>
+        </div>
+            <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+                <a href=""><img class="bd-placeholder-img" width="60px"
+                                                                   height="60px"
+                                                                   src="{% static 'aliados.png' %}"
+                                                                   aria-hidden="true"
+                                                                   preserveAspectRatio="xMidYMid slice"
+                                                           focusable="false"/></a>
+                <br/>
+                <h6 style="color:#FFF; font-size:14px;">
+                 Aliados
+                </h6>
+            </div>
+            <div class="col-md-2 col-lg-auto col-6 text-center" style="margin-top: 10px;">
+                <a href=""><img class="bd-placeholder-img" width="60px"
+                                                                   height="60px"
+                                                                   src="{% static 'afiliado.png' %}"
+                                                                   aria-hidden="true"
+                                                                   preserveAspectRatio="xMidYMid slice"
+                                                           focusable="false"/></a>
+                <br/>
+                <h6 style="color:#FFF; font-size:14px;">
+                  Afiliados
+                </h6>
+            </div>
+
+
+        </div>
+    </center>
+</div>
+
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <a href=""><img class="bd-placeholder-img" width="100%" height="100%"
+                 src="{% static 'inclusion.png' %}"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+
+            <div class="container">
+                <div   class="carousel-caption text-start">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+           <a href="">  <img class="bd-placeholder-img" width="100%" height="100%"
+                 src="{% static 'inclusion.png' %}"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+         <a href="">     <img class="bd-placeholder-img" width="100%" height="100%"
+                 src="{% static 'inclusion.png' %}"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" /></a>
+
+            <div class="container">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="container marketing">
+    <h2 class="text-center mt-4">Lista de Contratos</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Año</th>
+                <th>Consecutivo</th>
+                <th>Número de Contrato</th>
+                <th>Entidad</th>
+                <th>Objeto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contract in contracts %}
+            <tr>
+                <td>{{ contract.year }}</td>
+                <td>{{ contract.consecutive }}</td>
+                <td>{{ contract.contract_number }}</td>
+                <td>{{ contract.entity }}</td>
+                <td>{{ contract.object }}</td>
+            </tr>
+            <tr>
+            <td colspan="5">
+                <strong>Documentos Asociados:</strong>
+                <ul>
+                    {% for document in contract.documents.all %}
+                    <li>
+                        <a href="{{ document.file.url }}" target="_blank">{{ document.file.name }}</a>
+                    </li>
+                    {% empty %}
+                    <li>No hay documentos asociados.</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- FOOTER -->
+<div style="Background-color:#ff006c">
+
+    <div class="container-fluid" style="color:#FFF; font-size:14px;">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-5 mb-6 offset-md-1">
+                    <h5>Información de contacto</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Misión y observación de genero e inclusión</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Dirección sede
+                            principal: </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"> VXXXXXXXXXX </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Teléfono:
+                            | Email: gerente@mogi.com</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Terminos y
+                            condiciones</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Política de privacidad
+                            y tratamiento de datos personales</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white"> Política de derechos
+                            de autor </a></li>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <h5>Interes</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-white">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-white">Instagram</a></li>
+                        <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-white">Twitter</a></li>
+                        <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-white">Tiktok</a></li>
+
+                    </ul>
+                </div>
+
+
+                <div class="col-md-3  mb-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.784532801394!2d-73.69506763926488!3d3.6921837737990497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e0f18aaa78b79%3A0xd5b8c9f9fefbb59c!2sHOSPITAL%20LOCAL%20SAN%20MARTIN%20META!5e0!3m2!1ses!2sco!4v1668740355871!5m2!1ses!2sco"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="	https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+<script src="{% static 'assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script>
+
+const size = 12;
+const cont = 2;
+
+var texto = document.getElementsByClassName('texto');
+for (let i = 0; i < texto.length; i++){
+   texto[i].style.fontSize = `${size}px`;
+}
+
+function normal(){
+    var texto = document.getElementsByClassName('texto');
+    for (let i = 0; i < texto.length; i++){
+        texto[i].style.fontSize = `${size}px`;
+        console.log(texto[i].style.fontSize);
+    }
+}
+
+function aumentar(){
+    var texto = document.getElementsByClassName('texto');
+    for (let i = 0; i < texto.length; i++){
+        const actualSize = texto[i].style.fontSize.replace("px", "");
+        texto[i].style.fontSize = `${parseInt(actualSize)+cont}px`;
+        console.log(texto[i].style.fontSize);
+    }
+}
+
+function restar(){
+    var texto = document.getElementsByClassName('texto');
+    for (let i = 0; i < texto.length; i++){
+        const actualSize = texto[i].style.fontSize.replace("px", "");
+        texto[i].style.fontSize = `${parseInt(actualSize)-cont}px`;
+        console.log(texto[i].style.fontSize);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

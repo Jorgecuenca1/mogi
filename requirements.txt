@@ -10,5 +10,4 @@ Pillow
 django-file-validator
 django-ckeditor
 django-nested-admin
-psycopg2
 django_form_builder
