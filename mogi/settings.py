@@ -56,7 +56,9 @@ CORS_ALLOWED_ORIGINS = [
     # Otros dominios permitidos, si es necesario
 ]
 ROOT_URLCONF = 'mogi.urls'
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://mogi-col.org'
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
