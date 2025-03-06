@@ -53,11 +53,11 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "https://mogi.vueanalytic.com",
-    'www.mogi-col.org'
+    'https://www.mogi-col.org'
 ]
 ROOT_URLCONF = 'mogi.urls'
 CSRF_TRUSTED_ORIGINS = [
-    'https://mogi-col.org','www.mogi-col.org'
+    'https://mogi-col.org','https://www.mogi-col.org'
 ]
 TEMPLATES = [
     {
