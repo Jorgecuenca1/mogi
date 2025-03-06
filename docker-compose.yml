@@ -28,8 +28,8 @@ services:
       - '80:80'
       - '443:443'
     environment:
-      DOMAINS: 'mogi.vueanalytic.com -> http://mogi:8002'
-      STAGE: 'production' # Don't use production until staging works
+      DOMAINS: 'www.mogi-col.org -> http://mogi:8002'
+      STAGE: 'staging' # Don't use production until staging works
       CLIENT_MAX_BODY_SIZE:  5M
     volumes:
       - https-portal-data:/var/lib/https-portal

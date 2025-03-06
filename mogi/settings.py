@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(k+$-wmg5m$*qx@^f-aul59+4nhk6m$(=9m2iwkv%)rk_ub&tx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','mogi.vueanalytic.com','https://mogi.vueanalytic.com','vueanalytic.com']
+ALLOWED_HOSTS = ['*','www.mogi-col.org','mogi.vueanalytic.com','https://mogi-col.org','https://mogi.vueanalytic.com','vueanalytic.com']
 
 
 INSTALLED_APPS = [
@@ -53,11 +53,11 @@ MIDDLEWARE = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "https://mogi.vueanalytic.com",
-    # Otros dominios permitidos, si es necesario
+    'www.mogi-col.org'
 ]
 ROOT_URLCONF = 'mogi.urls'
 CSRF_TRUSTED_ORIGINS = [
-    'https://mogi-col.org'
+    'https://mogi-col.org','www.mogi-col.org'
 ]
 TEMPLATES = [
     {
